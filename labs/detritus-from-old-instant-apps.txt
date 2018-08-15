@@ -1,0 +1,114 @@
+ <!--                       <section>
+                            <h2 id="section_2" role="button" style="text-align: left;"><img src="./img/32_2.png" alt="section 2" height="32" width="32" class="num_circ">Prepare the Dialog Flow</h2>
+
+							<ol>
+								<li>In your bot, click <img src="img/left_nav_dialog.png" alt="the Flows icon"> to open the dialog flow editor.</li>
+								<li>Comment out the following states:
+								<ul>
+									<li><code>askPaymentType</code></li>
+									<li><code>askCreditCardNumber</code></li>
+									<li><code>askCreditCardValidness</code></li>
+								</ul><br>
+								<img src="img/instantapps-comment-out.png" alt="screenshot showing the three states commented out"></li>
+
+								</ol>
+								                        </section>
+                        <hr>-->
+						<li>Below that, add this state to copy data from the instant app to the bot variables.
+		<pre>  verifiedDataCopyBack:
+    component: "System.CopyVariables"
+    properties:
+      from: "payment.value.senderName,payment.value.senderMessage,payment.value.orderQuantity,payment.value.orderProductName,payment.value.recipientName,payment.value.recipientAddress,payment.value.flowerCost,payment.value.deliveryCost"
+      to: "senderName,senderMessage,orderQuantity,orderProductName,recipientName,recipientAddress,flowerCost,deliveryCost"
+    transitions:
+      next: "displayVerifiedOrder"</pre></li>
+	  <li>And add this state to display the verified order:
+	  <pre>  displayVerifiedOrder:
+    component: "System.Output"
+    properties:       
+      text: "Your order ${orderNumber.value} for ${orderQuantity.value.number} item(s) of  ${orderProductName.value} is ready for delivery.We deliver to ${recipientName.value}, ${recipientAddress.value}"
+      keepTurn: true
+    transitions:
+      next: "paymentOrCancel"</pre></li>
+	  
+	  
+	  							<h3>Make a Payment</h3>
+							
+							<p>Now we'll add the logic to check whether the customer wants to make a payment or cancel the order.</p>
+							<ol>
+								<li>In the left navigation, click <img src="img/left_nav_dialog.png" alt="the Flows icon"> to open the dialog flow editor.</li>								<li>After the <code>displayVerifiedOrder</code> add a new <code>System.List</code> component to check whether customer would like to make a payment and place the order:<pre>  paymentOrCancel:
+    component: "System.List"
+    properties:       
+      prompt: "Do you want to make a payment and submit this order?"
+      options:
+        - label: "Yes, please submit"
+          value: "submit"
+        - label: "No, please cancel"
+          value: "cancel"  
+    transitions:
+      actions:
+        submit: "setCustomerName"
+        cancel: "cancelOrder"</pre></li>
+								<li>Add the <code>setCustomerName</code> and <code>setFlowerCost</code>states to check if the customer wants to make a payment, capture the customer name and the cost of the order, and send that info to another instant app.
+								<pre>  setCustomerName:
+    component: "System.SetVariable"
+    properties:
+      variable: "customerName"
+      value: "${profile.firstName} ${profile.lastName} "
+    transitions:
+      next: "setFlowerCost"
+      
+  setFlowerCost:
+    component: "System.SetVariable"
+    properties:
+      variable: "flowerCost"
+      value: "169"
+    transitions:
+      next: "makePayment"</pre></li>
+								
+							</ol>
+							</ol>	  
+							
+							
+                        <section>
+                            <h2 id="section_6" role="button" style="text-align: left;"><img src="./img/32_6.png" alt="section 6" height="32" width="32" class="num_circ">Integrate the Flowers Payment Instant App with the Bot</h2>		
+							
+							<p>....</p>
+							<ol>
+							<li>Return to the bot designer and navigate to your bot (<code>advt24hrsflowers_bot8<i>&lt;YourUniqueInitials&gt;</i></code>).</li>
+							<li>Click <img src="img/left_nav_dialog.png" alt="the Flows icon"> to open the dialog flow editor.</li>
+							<li>Navigate to the <code>setFlowerCost</code> state and paste the following two states below it:
+							<pre>  makePayment:
+    component: "System.Interactive"
+    properties:
+      sourceVariableList: "flowerCost, delieryCost, customerName"
+      variable: "payment" 
+      id: "24_Hrs_Flowers_Payment_XX"
+      prompt: "To make a payment click the Make Payment link below"
+      linkLabel: "Make Payment"
+      cancelLabel: "Cancel"
+      translate: 
+    transitions:
+      next: "beforeSubmit"
+      actions:
+        cancel: "cancelOrder"
+        textReceived: "beforeSubmit"   
+  
+  beforeSubmit:
+    component: "System.Output"
+    properties:
+      text: "Your payment has been received, please wait..."
+      keepTurn: true
+    transitions:
+      next: "submitOrder"
+      
+# END - Instant Apps - Edit Order is being implemented now.</pre>
+							<p class="note">The <code>makePayment</code> state is a <code>System.Interactive</code> component that calls the Flowers Payment instant app.</p>
+							<p class="note">It calls <code>beforeSubmit</code> to display a message to the user and use <code>keepTurn: true</code> to jump to <code>submitOrder</code>. At the moment this simply displays a message that the order has been submitted. In future, you could add a call to an API to process the order.</p></li>
+							<li>In the <code>orderSummary</code> state, change the value of the <code>SubmitOrder</code> attribute to <code>"paymentOrCancel"</code>.
+							<p class="note">This connects the <code>orderSummary</code> screen to the payment instant app so that, assuming there are no further changes, the customer can make their purchase.</p></li>
+							</ol>
+
+
+                        </section>
+                        <hr>							

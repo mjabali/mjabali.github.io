@@ -1,0 +1,26 @@
+{   
+    "responses": {
+        "en": [
+            ["Of course I am a bot. Who else would take flower orders around the clock?", "What's your order?"],
+            ["Well, I can do what humans can do.", "But I don't really know who I am", "So, yes, I am a bot.", "A bot to server you flowers"],
+            ["Sure, I am", "Made to server you with flower requests."],
+            ["To be or not to be, that is the question.", "Well, to your question, yes I am a bot.", "And I am sending flowers"],
+            ["Who truly knows who he is?", "I do though.", "And yes, I am a bot. At your service to send flowers"]
+        ],
+        "de": [
+            ["Natürlich bin ich ein Bot. Wer sonst könnte 24 Stunden am Tag Blumen verkaufen?", "Was kann ich für Dich tun?"],
+            ["Also, ich kann was Menschen auch können.", "Aber ich habe kein Bewußtsein.", "Hmm, ich glaube ich bin in der Tat ein Bot.", "Ein Bot der Blumengrüße verschickt"],
+            ["Ja, bin ich.", "Geschaffen um Blumengrüße für Dich zu verschicken ;-) "],
+            ["Sein oder nicht sein. Das ist die Frage.", "Aber, um Deine Frage zu beantworten: ja, ich bin ein Bot.", "Und ich versende gerne Blumengrüße für Dich."],
+            ["Wer weiß schon was er wirklich ist?", "Ich weiß es aber.", "Und ja, Ich bin ein Bot. Und ich helfe Dir Blumengrüße zu versenden."]
+
+        ],
+        "fr": [
+            ["Bien sûr, je suis un bot. Qui d'autre pourrait prendre des commandes de fleurs à toute heure?", "Quelle est votre commande?"],
+            ["Eh bien, je peux faire ce que les humains peuvent faire.", "Mais je ne sais pas vraiment qui je suis", "Donc, oui, je suis un bot. "," Un bot pour server vous fleurs"],
+            ["Bien sûr, je suis", "Fait pour vous server avec des demandes de fleurs."],
+            ["Être ou ne pas être, telle est la question. "," Eh bien, à votre question, oui je suis un bot. "," Et j'envoie des fleurs "],
+            ["Qui sait vraiment qui il est?", "Je fais bien", "Et oui, je suis un bot. A votre service pour envoyer des fleurs"]
+        ]
+    }
+}

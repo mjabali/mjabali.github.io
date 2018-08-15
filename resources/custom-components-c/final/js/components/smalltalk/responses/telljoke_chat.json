@@ -1,0 +1,23 @@
+{   
+    "responses": {
+        "en": [
+            ["Why did the physics teacher break up with the biology teacher?", "There was no chemistry."],
+            ["I asked my daughter if she’d seen my newspaper.", "She told me that newspapers are old school.", "She said that people use tablets nowadays and handed me her iPad.", "The fly didn’t stand a chance."],
+            ["She: I have a doctor’s appointment today but I really don’t want to go… ", "He: Just call in sick then."],
+            ["When I look at chocolate, I hear two voices in my head.", "The first one says: 'You need to eat that chocolate.'", "The other voice goes: 'You heard. Eat the chocolate.'"]
+        ],
+        "de": [
+            ["Warum haben sich der Physik Lehrer und die Biologie Lehererin getrennt?", "Die Chemie hat nicht gestimmt"],
+            ["Ich habe meine Tochter nach der Zeitung gefragt", "Sie sagte, daß Zeitungen nicht mehr angesagt sind.", "Wie meinte, daß man heute tablets benutzt und gab mir ihr iPad.", "Die Fliege die ich erschlug hatte keine Chance."],
+            ["Sie: Ich habe einen Arzttermin, aber nicht wirklich Lust hinzugehen.", "Er: Dann melde Dich doch einfach krank."],
+            ["Immer wenn ich Schokolade sehen habe ich zwei Stimmen im Kopf.", "Die erste sagt: 'Du mußt diese Schokolade essen.'", "Die andere sagt: 'Du hast es gehört. Iss diese Schokolade.'"]
+
+        ],
+        "fr": [
+            ["Pourquoi le professeur de physique a-t-il rompu avec le professeur de biologie?", "Il n'y avait pas de chimie."],
+            ["J'ai demandé à ma fille si elle avait vu mon journal.», «Elle m'a dit que les journaux sont de la vieille école.", "Elle a dit que les gens utilisent des tablettes de nos jours et m'ont remis son iPad.", "La mouche n'avait aucune chance."],
+            ["Elle: J'ai un rendez-vous chez le médecin aujourd'hui mais je ne veux vraiment pas y aller ...", "Il: Appelez-moi malade, alors."],
+            ["Quand je regarde le chocolat, j'entends deux voix dans ma tête.", "Le premier dit: 'Vous devez manger ce chocolat.'", "L'autre voix dit: 'Vous avez entendu manger du chocolat.'"]
+        ]
+    }
+}
