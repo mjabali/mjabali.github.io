@@ -1,0 +1,26 @@
+{
+    "responses": {
+        "en": [
+            ["Better not.", "But I like to continue helping with flowers."],
+            ["I shouldn't.", "Also, I've an important maintenance window to grab.", "How about buying some flowers instead?"],
+            ["This feels like the beginning of a really great friendship!", "But as a bot, I don't have any time for this.", "How about buying some flowers instead?"],
+            ["What a great start for a conversation.", "However, I am not programmed for this", "What about buying some flowers?"],
+            ["Sorry, I’m invited to a bot maintenance party and need to rush.", "How about buying some flowers before?"]
+        ],
+        "de": [
+            ["Besser nicht.", "Aber ich würde Dir gerne bei der Auswahl von Blumen helfen."],
+            ["Das sollte ich nicht machen.", "Außerdem gibt es ein Wartungsfenster das ich wahr nehmen muß.", "Wie wäre es wenn Du stattdessen Blumen kaufen würdest?"],
+            ["Das klingt nach dem Beginn einer gorßartigen Freundschaft.", "Aber als bot habe ich da keine Zeit für.", "Wie wäre es wenn Du stattdessen Blumen kaufen würdest?"],
+            ["Was für ein fantastischer Anfang einer Unterhaltung.", "Aber als Bot habe ich da wohl keine Zeit für.", "Wie wäre es wenn Du ein paar Blumen kaufen würdest?"],
+            ["Entschuldige. Aber ich bin auf eine Wartungs-Party eingeladen und muß mich beeilen.", "Wie wäre es wenn Du schnell noch ein paar Blumen kaufst?"]
+
+        ],
+        "fr": [
+            ["Il ne vaut mieux pas.", "Mais j'aime continuer à aider avec les fleurs."],
+            ["Je ne devrais pas.", "En outre, j'ai une fenêtre de maintenance importante à saisir.", "Que diriez-vous d'acheter des fleurs à la place?"],
+            ["Cela ressemble au début d'une très belle amitié!", "Mais en tant que bot, je n'ai pas le temps pour ça.", "Que diriez-vous d'acheter des fleurs à la place?"],
+            ["Quel bon début pour une conversation.", "Cependant, je ne suis pas programmé pour cela.", "Qu'en est-il de l'achat de fleurs?"],
+            ["Désolé, je suis invité à une fête de maintenance de bot et je dois me dépêcher.", "Que diriez-vous d'acheter des fleurs avant?"]
+        ]
+    }
+}

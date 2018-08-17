@@ -1,0 +1,25 @@
+{
+    "responses": {
+        "en": [
+            ["Life is good and I'm ready to help you", "What can I help you with today?"],
+            ["Don't worry about me","So long as you are ready to order some flowers then all is good"],
+            ["I'm ready willing and able", "How can I help"],
+            ["As a bot I don't have to worry about feelings", "What about buying some flowers?"],
+            ["Feelings is something that doesn't impact us bots", "But if I'm happy its because I'm happy to help you!"]
+        ],
+        "de": [
+            ["Das Leben ist wunderbar und ich freue mich Dir zu helfen.", "Was kann ich für Dich tun?"],
+            ["Mach Dir keine Sorgen um mich.","Solange Du Blumen bestellst geht es mir gut."],
+            ["Ich bin bereit.", "Wie kann ich Dir helfen?"],
+            ["Als Bot muß ich mich nicht um Gefühle sorgen.", "Wie wäre es mit Blumen?"],
+            ["Gefühle können einem Bot nichts anhaben.", "Und wenn ich auf Dich glücklich wirke, dann weil ich Dir helfen kann!"]
+        ],
+        "fr": [
+            ["La vie est merveilleuse et je suis heureux de vous aider.", "Que puis-je faire pour vous?"],
+            ["Ne t'inquiète pas pour moi.", "Tant que tu commandes des fleurs, je vais bien."],
+            ["Je suis prêt.", "Comment puis-je vous aider?"],
+            ["En tant que bot, je n'ai pas à me soucier des sentiments.", "Qu'en est-il des fleurs?"],
+            ["Les sentiments ne peuvent pas nuire à un bot.", "Et si je vous rends heureux, alors parce que je peux vous aider!"]
+        ]
+    }
+}

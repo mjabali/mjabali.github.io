@@ -43,7 +43,7 @@
                 <div id="bookContainer">
                     <article>
 						<p>A common customer requirement is that bots can handle small talk, like responding to questions about the weather, attempts at flirtation, or simply "Who are you?".</p>
-						<p>For this lab, we are providing a custom component that returns pre-defined responses in English, German and French. Though a simple implementation, it is easy to extend and to hook up to backend services, if needed. The point of the smalltalk solution in this hands-on is to not get lost in conversation but to give a generic answer and to get the conversation back on track.</p>
+						<p>For this lab, we are providing a custom component that returns pre-defined responses in English, German and French. Though a simple implementation, it is easy to extend and to hook up to backend services, if needed. The point of the Smalltalk solution in this hands-on is to not get lost in conversation but to give a generic answer and to get the conversation back on track.</p>
 
 
                         <section>
@@ -61,7 +61,7 @@
                                 <li>Click <img src="img/left_nav_components.png" alt="the Components icon"> in the left navigation for the bot.</li>
 								<li>Paste your backend's ID into the <b>Backend ID</b> field.</li>
 								<li>Paste your backend's anonymous key into the <b>Anonymous Key</b> field.</li>
-								<li>Make sure that the completed version of your custom component implementation from lab 4 (<code>advt24hrsflowerscss<i>&lt;YourUniqueInitials&gt;</i></code>) is uploaded to the AMCe instance.</li>
+								<li>Make sure that the completed version of your custom component implementation from lab 5 (<code>advt24hrsflowerscss<i>&lt;YourUniqueInitials&gt;</i></code>) is uploaded to the AMCe instance.</li>
 								</ol>
 								
                         </section>
@@ -81,6 +81,9 @@
 								<ol>
 								<li>Click <img src="img/hamburger.png" alt="main menu icon"> and select <b>Development > Bots</b>.</li>									<li>Within the tile for the <code>advt24hrsflowers_smalltalk</code> bot, click <img src="img/options-menu.png" alt="the Options menu icon">, select <b>Clone</b>, and name the clone <code>advt24hrsflowers_smalltalk<i>&lt;YourUniqueInitials&gt;</i></code>. For example: <code>advt24hrsflowers_smalltalkJS</i></code>.</li>
 									 <li>Locate the tile for your clone of the bot (using the Search field might help) and click it to open the bot.</li>
+									 <li>Click <img src="img/left_nav_components.png" alt="the Components icon"> in the left navigation for the bot.</li>
+								<li>Paste your backend's ID into the <b>Backend ID</b> field.</li>
+								<li>Paste your backend's anonymous key into the <b>Anonymous Key</b> field.</li>
 									<li>In the bot, click <img src="img/train-button.png" alt="Train bot icon">, leaving <b>Trainer Ht</b> selected, and clicking <b>Submit</b>.</li>
 									<li>Now click <img src="img/left_nav_intents.png" alt="the Intents icon"> to see the intents that are available in the bot.</li>
 									<li>Open the tester by clicking <img src="img/test_button.png" alt="the Test icon"> and selecting <b>Bot</b>.</li>
@@ -126,8 +129,8 @@
 								<li>Scroll back to the top of the editor, click the <b>+ Components</b> button, click <b>Language</b>, and select <b>Intent</b>. </li>
 								<li>From the Insert After dropdown, select <b>resetiResult</b>.</li>
 								<li>Click <b>Apply</b>.</li>
-								<li>Change the intent state name to <code>smalltalk</code></li>
-								<li>Remove the following properties: <code>optionsPrompt</code>, <code>sourceVariable</code>, <code>translate</code></li>
+								<li>Change the intent state name to <code>smalltalk</code>.</li>
+								<li>Remove the following properties: <code>optionsPrompt</code>, <code>sourceVariable</code>, <code>translate</code>.</li>
 								<li>Set the <code>botName</code> property value to <code>"advt24hrsflowers_smallTalk<i>&lt;YourUniqueInitials&gt;</i>"</code> (with quotes).</li>
 								<li>Add a <code>next: "chitchat"</code> transition to the <code>transitions</code> element.</li>
 								<li>Set the <code>unresolvedIntent</code> action value to <code>"unresolvedState"</code>.</li>
@@ -161,9 +164,8 @@
 
 							<li>Click <img src="img/test_button.png" alt="the Test icon"> to open the tester and click <b>Intent</b>.</li>
 							<li>Type <code>Do you want to go out with me?</code>
-							<p class="note">It looks like the bot resolved the request to the OpenFranchise intent, which obviously isn't desirable. As we have seen in previous labs, training a bot is easy but disambiguating utterances is hard.</p>
-							<p class="note">To mitigate this, we could either bump up the confidence threshold of the <code>advt24hrsflowers_bot9<i>&lt;YourUniqueInitials&gt;</i></code> bot or remove overlapping utterances from the OpenFranchise intent.</p>
-							<p class="note">Also keep in mind that user requests may find a matching answer in the bot's Q&A module.</p></li>
+							<p class="note">Chances are, the bot resolved to an intent (e.g. the OpenFranchise intent) or a QnA response which obviously isn't desirable. As we have seen in previous labs, training a bot is easy but disambiguating utterances is hard.</p>
+							<p class="note">To mitigate this, we could either bump up the confidence threshold of the <code>advt24hrsflowers_bot9<i>&lt;YourUniqueInitials&gt;</i></code> bot or remove overlapping utterances from the OpenFranchise intent.</p></li>
 							<li>Back in the tester, try <code>are you a bot?</code>
 							<p class="note">In the <code>advt24hrsflowers_bot9<i>&lt;YourUniqueInitials&gt;</i></code> bot, this should come back unresolved, which is what we want.</p></li>
 							<li>In the tester, select <b>Bot</b>.</li>
@@ -193,7 +195,7 @@
 								<p class="note">The folder contains 5 files, the names of which match the names of the intents defined in the smalltalk bot.</p></li>
 								<li>Open to the <code>advt24hrsflowers_smalltalk<i>&lt;YourUniqueInitials&gt;</i></code> bot.</li>
 								<li>Click <img src="img/left_nav_intents.png" alt="the Intents icon"> to see the name pattern of the intents.</li></li>
-								<li>Create your own smalltalk intent that you want your bot to be able to respond to. Follow the naming pattern (<code><i>&lt;your topic_chat&gt;</i></code>)</li>
+								<li>Create your own smalltalk intent that you want your bot to be able to respond to. Follow the naming pattern (<code><i>&lt;your topic_chat&gt;</i></code>).</li>
 								<li>In the intent, create initial utterances and train the smalltalk bot.</li>
 								<li>Use the intent tester (click <img src="img/test_button.png" alt="the Test icon"> and click <b>Intent</b>) to ensure your intent is getting resolved.</li>
 								<li>Go back to your JavaScript IDE.</li>

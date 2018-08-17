@@ -47,7 +47,7 @@
                         <section>
                             <h2><img src="./img/32_begin.png" alt="section 0" height="32" width="32" class="num_circ">Prerequisites</h2>
 							<ul>
-								<li>Complete <a href="bots-hol_dialog-flow-a.html">Lab 3a</a></li>
+								<li>Complete <a href="bots-hol_dialog-flow-a.html">Lab 3a</a>.</li>
 							</ul>
   
                         </section>
@@ -92,7 +92,10 @@
 								<li>Changing the state name from <code>setVariable</code> to <code>setFlowersMenuData</code>.</li>
 								<li>Clicking <b>Apply</b>.</li>
 								</ol></li>
-								<li>Repeat step 4, except replace <code>setVariable</code> with <code>setBouquetsMenuData</code>.</li>
+								<li>Repeat step 4, except 
+								<ol type="a">
+									<li>From the Insert After dropdown, select <b>setFlowersMenuData</b>.</li>				
+									<li>Replace <code>setVariable</code> with <code>setBouquetsMenuData</code>.</li>
 								</ol>
 							<p>Next we'll adjust those states, including the adding of the mock menu data.</p>
 							<h3>Prepare the Flowers Menu</h3>
@@ -267,7 +270,7 @@ After configuring these changes, you should still be able to run your bot like b
 								<li>When you get to the Flowers menu, make a selection.</li>
 								<li>When you get to the question of how many flowers you want to buy, press the tester's <b>Reset</b> button.</li>
 								<li>Test again, but this time start by typing "I'd like to buy red roses" into the Message field.
-								<p class="note">You should be immediately asked how many flowers you want to buy. This demonstrates that entity slotting is working.</p></li>
+								<p class="note">Instead of being presented with a sequence of menus, you should be immediately asked how many flowers you want to buy. This demonstrates that entity slotting is working.</p></li>
 							</ol>
 							<h3>Troubleshooting</h3>
 							<p>If the menu isn't successfully rendered and the tester window shows an error complaining about an unexpected angle bracket (<code>&lt;</code>), you may have not set the <code>flowersMenu</code> context variable properly.</p>
@@ -382,11 +385,11 @@ After configuring these changes, you should still be able to run your bot like b
 							
 							<ol>
 								<li>In the tester (<img src="img/test_button.png" alt="the Test icon">), start by entering <code>Hi</code>.</li>
-								<li>Select <b>Buy Flowers</b> and then choose the bouquet option.
+								<li>Select <b>Order Flowers</b> and then choose the bouquet option.
 								<p class="note">You should be prompted for how many you want to order.</p></li>
 								<li>Click the tester's <b>Reset</b> button.</li>
-								<li>Test again, but this time start by typing "I want to buy a box of tulips" into the Message field and select the <b>Order Flowers</b> option.
-								<p class="note">With entity slotting working you should be asked how many boxes of tulips you'd like to order.</p></li>
+								<li>Test again, but this time start by typing <code>I want to buy a box of tulips</code> into the Message field and then select the <b>Order Flowers</b> option.
+								<p class="note">With entity slotting working you should immediately be asked how many boxes of tulips you'd like to order without having to traverse the full Flowers menu.</p></li>
 								
 							</ol>
 							<h3>One More Thing</h3>

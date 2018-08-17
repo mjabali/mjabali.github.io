@@ -46,12 +46,12 @@
 						<p>We'll take a deep dive into the following kinds of components:</p>
 						<ul>
 							<li><b>Custom components</b>, which enable you to execute custom logic and integrate with backend systems. Custom components take the form of custom APIs that are implemented with Node.js code. Custom components live outside of your bot, and are accessed through a <i>custom code service</i> that you register in your bot.</li>
-							<li><b>Custom components based on the Customer Message Model (CMM)</b>, in which you code the components in JavaScript using some helper classes provided by the Bots Custom Code SDK. We'll cover CMM components in Lab 4c.</li>							
+							<li><b>Custom components based on the Conversation Message Model (CMM)</b>, in which you code the components in JavaScript using some helper classes provided by the Bots Custom Code SDK. We'll cover CMM components in Lab 5c.</li>							
 							</ul>
 						<p>In this lab, we'll kick off our exploration of custom components by setting up some custom components and a local debugging environment for them. Specifically, we'll:
 						<ul>
 							<li>Create a custom component service starter project in AMCe. </li>
-							<li>Configure the custom component service for local development and debugging, using ngrok and the OMCe Custom Code Test Tools.
+							<li>Configure the custom component service for local development and debugging, using ngrok and the AMCe Custom Code Test Tools.
 							<p class="note">With local debugging of custom component services, we'll get early and immediate feedback about problems in our custom component code as well as get access to more verbose error messages that shorten the time needed to root out problems. And, by using an actual IDE debugger, we can look into the status of variables without printing them in log statements. 
 </p></li>
 						</ul>
@@ -67,6 +67,7 @@
 								<p class="note">To develop and debug custom component services locally, you need to set up your machine so that Oracle Intelligent Bots can communicate with the local copy of your custom component service. To facilitate this you'll use ngrok to expose your local machine to the Internet through secure tunnels.</p>
 								<p class="note"><b>Important:</b> Before using ngrok, ensure you read up on what it is and what it does (<a href="https://ngrok.com/" target ="_blank">https://ngrok.com/</a> to understand how it works and the possible risks. Be sure to adhere to your company security policies.</p>
 								<p>For this lab, the free ngrok offering will suffice.</p></li>
+								<li>The AMCe Custom Code Test Tools v18.1.1.0, which you can download from <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/amce-downloads-4478270.html"></a>.</li>
 								<li>Administration privileges on your local machine
 								<p class="note">This may be necessary for some of the Node scripts in this lab to work.</p></li>
 							</ul>
@@ -97,7 +98,8 @@ For this hands-on you need to have team member level access to Oracle Autonomous
 								<li>Click <b>+ New Backend</b>, enter <code>advt24hrsflowers<i>&lt;YourInitials&gt;</i></code> as the name and click <b>Create</b>.</li>
 								<li><i>Within the opened backend</i> (not the main menu), click the <b>APIs</b> tab.</li>
 								<li>Click <b>Select APIs</b>.</li>
-								<li>Click the plus (+) icon in the tile for <b>OracleMobileAPI</b>.</li>
+								<li>Click the plus (+) icon in the tile for <b>OracleMobileAPI</b>. (Your AMCe instance has been pre-populated with this API.)
+								</li>
 								<li>Click the plus (+) icon in the tile for <b>advt24hrsflowerscss</b> API that has <i>your initials</i> appended.
 								<p class="note"><b>Tip:</b> Type your initials into the Filter field to get to your artifacts faster.</p></li>
 
@@ -128,6 +130,10 @@ For this hands-on you need to have team member level access to Oracle Autonomous
 								<li>Back in the <code>resources</code> folder for this lab, open the <code>advt24hrsflowerscss.js</code> file and copy its content to the clipboard.</li>
 								<li>In the scaffold, open the <code>advt24hrsflowerscss<i>&lt;YourUniqueInitials&gt;</i>.js</code> file in a text editor, delete its contents, and paste in the contents of your clipboard.</li>
 								<li>In the top part of the file, locate the <code>const apiURL =</code> declaration.</li>
+								<li>Change the following line:
+								<pre>var shell = require('./shell')();</pre>
+								<p class="note">to:</p>
+								<pre>var shell = require('./js/shell')();</pre></li>
 								<li>In its value, append your initials to <code>advt24hrsflowerscss</code> so that it matches the name of your API.</li>
 								<li>Save and close the file.</li>
 								<li>In the same folder, open the <code>package.json</code> file in a text editor.</li>
@@ -164,22 +170,24 @@ For this hands-on you need to have team member level access to Oracle Autonomous
 
 <!--
  
-45.	Click the API Designer link on top of the page to navigate back to the Implementation page-->
+45.	Click the API Designer link on top of the page to navigate back to the Implementation page......-->
 
 							<h3>What We Just Did</h3>
 								<p>We turned a custom API into a custom component service by:</p>
 								<ul>
-									<li>Adding (from the <code>resources/js</code> folder) starter custom components and the Oracle Intelligent Bots custom component SDK (<code>sdk.js</code>, <code>shell.js</code>, <code>registry.js</code> and <code>MessageModel.js</code>) to the implementation.</li>
+									<li>Adding the <code>js</code> folder that contains the starter custom components and the Oracle Intelligent Bots custom component SDK (which contains <code>sdk.js</code>, <code>shell.js</code>, <code>registry.js</code> and <code>MessageModel.js</code>) to the implementation.</li>
 									<li>Editing the main file with the content from <code>advt24hrsflowerscss.js</code> to configure it to become the component service implementation. </li>
+									<li>Updating the dependencies in the <code>package.json</code> file.</li>
 								</ul>
-							<p>If the uploading of the implementation and the testing of the API in OMCe were successful, then you are good to continue.</p>
+							<p>If the uploading of the implementation and the testing of the API in AMCe were successful, then you are good to continue.</p>
 							
 							<h3>Troubleshooting</h3>
 							<p>The most common problems originate from:</p>
 							<ul>
 								<li>Misconfiguration, e.g. forgetting to edit the <code>package.json</code> file.</li>
 								<li>Missing resource files, e.g. forgetting to call <code>npm install</code> from the command line.</li>
-							</ul>							
+								<li>Not updating the <code>require</code> statement in <code>advt24hrsflowerscss<i>&lt;YourUniqueInitials&gt;</i>.js</code> to:</p>
+								<pre> var shell = require('./js/shell')();</pre></li>							</ul>							
                         </section>						
 						
                         <hr>
@@ -189,8 +197,8 @@ For this hands-on you need to have team member level access to Oracle Autonomous
 							<p>In this part of the lab, we'll configure the AMCe custom code test tools for local testing and deployment.</p> 
 							<p><b>Tip:</b> This is a good time to open the custom component service folder in a JavaScript IDE. You can also use a plain text editor, but it won't be fun.</p> 
 							<ol>
-								<li>Open a browser and navigate to the <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/mobile-suite-3636471.html" target="_blank">OMCe Downloads page on OTN</a>.
-								<p class="note">We'll be using the OMCe version of the testing tools, because the latest AMCe tools download is based on a later version of Node that is not compatible with this lab.</p></li>
+								<li>Open a browser and navigate to the <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/amce-downloads-4478270.html" target="_blank">AMCe Downloads page on OTN</a>.
+								<!--<p class="note">We'll be using the OMCe version of the testing tools, because the latest AMCe tools download is based on a later version of Node that is not compatible with this lab.</p>--></li>
 								<li>Select the <b>Accept License Agreement</b> radio button.</li>
 								<li>Scroll down to the <b>Tools</b> category.</li>
 								<li>Click on the link for the <b>Custom Code Test Tools</b> to download them.</li>

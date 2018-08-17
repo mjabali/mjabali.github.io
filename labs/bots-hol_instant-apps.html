@@ -42,7 +42,7 @@
                 </div>
                 <div id="bookContainer">
                     <article>
-						<p>The purpose of this lab is to integrate create instant apps, which give users a way to work with form data, and then integrate them with the 24HrsFlowers chatbot. We'll create instant apps to enable customers to:</p>
+						<p>The purpose of this lab is to create instant apps, which give users a way to work with form data, and then integrate them with the 24HrsFlowers chatbot. We'll create instant apps to enable customers to:</p>
 						<ul>
 							<li>Change and confirm their order.</li>
 							<li>Enter their credit card information.</li>
@@ -76,18 +76,17 @@
 								<li>In the designer, click <b>New Instant App</b>.<br><img src="img/instantapps-new-app.png" alt="screenshot showing the several tiles, including one for 'New Instant App'"></li>
 								<li>Click the <b>Blank</b> template.
 									</li>
-								<li>For the both the name and the ID of the instant app, use <code>24hrsflowersEditOrder_</code> and append your unique initials. E.g. <code>24hrsflowersEditOrder_AB</code>.</li>
+								<li>For the both the name and the ID of the instant app, use <code>_24hrsflowersEditOrder</code> and <i>prepend</i> your unique initials. E.g. <code>AB_24hrsflowersEditOrder</code>.</li>
 								<li>Check the <b>Initially Active</b> checkbox.
-
-								<li>Select the <code>PANE_1</code> element and change its <b>Pane ID</b> to  <code>Verify_Change_Order</code>.</li>
 								<li>Select the <b>Layout</b> tab.</li>
-								<li>For each item in the table below, follow these three steps:
-									<ul>
+								<li>Change the name of the pane's <b>Pane ID</b> field to  <code>Verify_Change_Order</code>.</li>
+								<li>For each item in the table below, follow these  steps:
+									<ol type="a">
 										<li>Within the <b>Verify_Change_Order</b> pane, click <b>Add Element</b>.</li>
-										<li>In the palette in the middle of designer, click the button for the element type given in the second column (i.e. <b>Image</b>, <b>Single-Line Input</b>, <b>Select Menu</b>, or <b>Button</b>.).</li>
+										<li>In the palette in the middle of designer, click the button for the element type given in the second column (i.e. <b>Image</b>, <b>Single-Line Input</b>, or <b>Button</b>.).</li>
 										<li>In the <b>Element ID</b> field, enter the element ID given in the third column.</li>
 										<li>Fill in any of the properties specified in the table for that element.</p>
-									</ul>
+									</ol>
 
 						
 								   <table summary="This table shows the elements to be dragged and dropped on to the Verify_Change_Order pane.">
@@ -95,62 +94,63 @@
                                             <th scope="col">Order</th>
                                             <th scope="col">Element Type</th>
 											<th scope="col">Element ID</th>
-                                            <th scope="col">Properties......</th>                                        </tr>
+                                            <th scope="col">Properties</th>                                        </tr>
                                         <tr>
                                             <td scope="row">1</td>
                                             <td>Image</td>
                                             <td><code>image_header</code></td>
-											<td>Upload image from <code>resources/images</code> folder of your lab.</td>
+											<td>Upload the image from <code>resources/instant-apps/verify-order-image.png</code> folder of your lab.<b>PK: add the link, once it is in the resources folder</b></td>
 										</tr>
                                         <tr>
                                             <td scope="row">2</td>
                                             <td>Single-Line Input</td>
                                             <td><code>inputSenderName</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Sender Name</code></td>
 										</tr>
                                         <tr>
                                             <td scope="row">3</td>
                                             <td>Single-Line Input</td>
                                             <td><code>inputSenderMessage</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Sender Message</code></td>
 										</tr>
 										<tr>
                                             <td scope="row">4</td>
                                             <td>Single-Line Input</td>
-                                            <td><code>productName</code></td>
-											<td>Uncheck <b>Initially Enabled</b>.</td>
+                                            <td><code>inputProductName</code></td>
+											<td><b>Initially Enabled</b>: <i>Uncheck</i><br><b>Label</b>: <code>Product Name</code></td>
 										</tr>										
 										<tr>
                                             <td scope="row">5</td>
                                             <td>Single-Line Input</td>
                                             <td><code>inputRecipientName</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Recipient Name</code></td>
 										</tr>										
 										<tr>
                                             <td scope="row">6</td>
                                             <td>Single-Line Input</td>
                                             <td><code>inputRecipientAddr</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Recipient Address</code></td>
 										</tr>						
 										<tr>
                                             <td scope="row">7</td>
                                             <td>Button</td>
                                             <td><code>btnSubmit</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Submit</code></td>
 										</tr></table><br>
 										<p class="note">Here's what the pane should look like when you have finished.</p>
 										<img src="img/instantapps-drag-elements.png" alt="screenshot showing the instant app designer, which contains a palette of elements and the 7 elements from the table added to the pane.">
-									</li>
+										<p class="note"><b>Hint 1:</b> As an alternative to using the <b>Add Element</b> button, you can drag and drop UI elements directly into the layout. This is useful when you want to insert an element in a specific place.</p>
+										<p class="note"><b>Hint 2:</b> Should you need to delete an element, first select it, then click the ellipsis (<b>...</b>) icon that appears, and then select <b>Delete</b>.</p>									</li>
 								</ol>
 								<h3>Create Parameters for Communication with the Bot</h3>
 								
-								<p>Now we'll add some parameters to pass data between the bot and the instant app. Each parameter corresponds with one of the UI elements that we just created in the instant app.</p>
+								<p>Now we'll add some parameters to pass data between the bot and the instant app's UI elements. Each parameter corresponds with one of the UI elements that we just created in the instant app.</p>
 								<ol>
 									<li>Click the <b>Parameters</b> tab.</li>
 									<li>For each item in the list below, follow these two steps:
 									<ol type="a">
-										<li>Within the <b>Verify_Change_Order</b> pane, click <b>Add Parameter</b>.</li>
-										<li>In the <b>Parameter ID</b> field, enter the parameter ID given in the table.</li>
+										<li>Within the <b>Parameters</b> tab, click <b>Add Parameter</b>.</li>
+										<li>In the <b>Parameter ID</b> field, enter the parameter ID given below.</li>
 									</ol>
 									<ul>
 										<li><code>senderName</code></li>
@@ -159,10 +159,10 @@
 										<li><code>recipientName</code></li>
 										<li><code>recipientAddress</code></li>
 									</ul>
-									<p class="note">These parameters are named to match variable names in the dialog flow, so they need to be entered exactly as above to work correctly.</p>			
+									<p class="note">These parameters are named to match the context variable names that are passed from the bot to the instant app. (If they don't match, they won't work correctly.)</p>			
 </li>	
 										<p class="note">Here's how the designer should look after you have entered all of the parameters.</p>
-										<img src="img/instantapps-parameters.png." alt="screenshot showing the Parameters tab in the Instant Apps designer."></li>
+										<img src="img/instantapps-parameters.png" alt="screenshot showing the Parameters tab in the Instant Apps designer."></li>
 									</ol>
 									<h3>Retrieve Data from Parameters and Assign to UI Elements</h3>
 									<p>Now we'll assign values to the UI elements based on data retrieved from the parameters.</p> 
@@ -178,7 +178,7 @@
 										<table summary="This table shows 5 UI elements and the values that they are assigned.">
                                         <tr>
                                             <th scope="col">Element</th>
-                                            <th scope="col">Value</th>
+                                            <th scope="col">New Value</th>
                                         </tr>
                                         <tr>
                                             <td>inputSenderName</td>
@@ -189,7 +189,7 @@
                                             <td><code>{senderMessage}</code></td>
                                         </tr>             
 										<tr>
-                                            <td>productName</td>
+                                            <td>inputProductName</td>
                                             <td><code>{productName}</code></td>
                                         </tr>
 										<tr>
@@ -197,7 +197,7 @@
                                             <td><code>{recipientName}</code></td>
                                         </tr>
 										<tr>
-                                            <td>inputRecipientAddress</td>
+                                            <td>inputRecipientAddr</td>
                                             <td><code>{recipientAddress}</code></td>
                                         </tr>	
 	
@@ -216,12 +216,12 @@
 										<li>In the <b>Pane ID</b> field, type <code>Verified_Page</code>.</li>
 										<li>In the left navigation under the new <b>Verified_Page</b> pane, click <b>Add Element</b>.</li>
 										<li>Click <b>Label / Text</b> to create a label.</li>
-										<li>In the <b>Element ID</b> field, type <code>done Message</code>.</li>
+										<li>In the <b>Element ID</b> field, type <code>doneMessage</code>.</li>
 										<li>In the <b>Text</b> field, type <code>Your order has been corrected. Please proceed by closing this window</code>.</li>		
 									</ol>
 									<h3>Navigate and Exit the Bot</h3>
 									
-									<p>Now we'll add these two actions to <b>btnSubmit</b>.</p>
+									<p>Now we'll some two actions to the <b>Submit</b> button that we added to the first page (<b>Verify_Change_Order</b>). The actions are:</p>
 									<ul>
 										<li><b>Activate and Show Pane</b>, which allows us to navigate to <b>Verified_Page</b>.</b></li>
 										<li><b>ExitToBot</b>, which allows us to send the data back to the bot. Later in the lab, we'll update the <code>editOrder</code> state to pull in this data.</li>
@@ -252,7 +252,7 @@
                                         </tr>             
 										<tr>
                                             <td>productName</td>
-                                            <td><code>{productName}</code></td>
+                                            <td><code>{inputProductName}</code></td>
                                         </tr>
 										<tr>
                                             <td>recipientName</td>
@@ -260,11 +260,19 @@
                                         </tr>
 										<tr>
                                             <td>recipientAddress</td>
-                                            <td><code>{inputRecipientAddress}</code></td>
+                                            <td><code>{inputRecipientAddr}</code></td>
                                         </tr>
 										</table>
+										<p class="note">This is how the UI should look after you have added the actions to the Submit button</p>
+										<img src="img/instantapps-button-actions.png" alt="screenshot showing the btnSubmit item chosen in the Layout tab, and the two actions displayed in the middle pain. For the Exit to Bot action, the five parameters and their values are displayed."
+										<!--instantapps-button-actions.png -->
 										</li>			
 									</ol>
+									<h3>Save the Instant App</h3>
+									<p><b>Important:</b> Before we move on to the next section, be sure to save your work. If you inadvertently dismiss the Instant Apps tab, you could lose all of your work!</p>
+									<ul>
+										<li>In the top part of the screen, click the <b>Save</b> button.</li>
+									</ul>
 			
                         </section>
                         <hr>
@@ -281,7 +289,7 @@
 								<pre>  editOrder:
     component: "System.Interactive"
     properties:
-      sourceVariableList: "senderName,senderMessage,productName,recipientName,recipientAddress"
+      sourceVariableList: "senderName,senderMessage,orderProductName,recipientName,recipientAddress"
       variable: "order" 
       id: "XX_24hrsflowersEditOrder"
       prompt: "Please click the link below to make changes otherwise cancel"
@@ -293,13 +301,14 @@
       actions:
         cancel: "paymentOrCancel"
         textReceived: "paymentOrCancel"</pre></li>
+		<li>Replace <code>XX_24hrsflowersEditOrder</code> with the name you gave your instant app (e.g. <code>AB_24hrsflowersEditOrder</code>).</li>
 		</ol>
 		<h3>What We Just Did</h3>
 		<ul>
 			<li>Configured the <code>sourceVariableList</code> property with a list of variables, the values of which are passed as input arguments to the instant app.</li>
 			<li>Set the <code>variable</code> property to reference the <code>"order"</code> context variable. This context variable holds values returned from the instant app. You access the return values using expressions like <code>${order.value.&lt;return_attribute_name&gt;}</code></li>
 			<li>Set other properties to define the labels to display for the instant app.
-			<p class="note"><b>Note:</b> For purposes of this lab, we're using String labels instead of resource bundles, since the primary goal of this lab is to demonstrate instant apps. The starter app for the next lab will have the resource bundles incorporated.</b></li>
+			<p class="note"><b>Note:</b> For purposes of this lab, we're using String labels instead of resource bundles, since the primary goal of this lab is to demonstrate instant apps. The starter app for the next lab will have the resource bundles incorporated.</b></p></li>
 		</ul>
 
 
@@ -331,10 +340,17 @@
 								<li>In the designer, click <b>New Instant App</b>.</li>
 								<li>Select the <b>Blank</b> template.
 									</li>
-								<li>For the both the name and the ID of the instant app, prepend your unique initials to <code>_24_Hrs_Flowers_Payments</code> and append your unique initials. E.g. <code>AB_24_Hrs_Flowers_Payments</code>.</li>
-								<li>Upload the header image. <b>PK: add the link</b></li>
-								<li>Select the <code>PANE_1</code> element and change its <b>Pane ID</b> to <code>Flowers_Payments</code>.</li>
+								<li>For the both the name and the ID of the instant app, prepend your unique initials to <code>_24hrsflowersPayment</code>. E.g. <code>AB_24hrsflowersPayment</code>.</li>
+								<li>Upload the header image. <b>Abhay, I need the image. PK: add the link, once it is in the resources folder.....</b></li>
+								<li>Click the <b>Parameters</b> tab.</li>
+								<li>Add the following parameters:
+									<ul>
+										<li><code>flowerCost</code></li>
+										<li><code>customerName</code></li>
+									</ul>
+								</li>
 								<li>Select the <b>Layout</b> tab.</li>
+								<li>Select the <code>PANE_1</code> element and change its <b>Pane ID</b> to <code>Flowers_Payments</code>.</li>
 								<li>For each item in the table below, follow these three steps:
 									<ul>
 										<li>Within the <b>Flowers_Payments</b> pane, click <b>Add Element</b>.</li>
@@ -352,76 +368,85 @@
                                             <td scope="row">1</td>
                                             <td>Image</td>
                                             <td><code>image_header_1</code></td>
-											<td>Upload image from images folder of your lab/images </td>
+											<td>Upload image from images folder of your resources/instant-apps/payment-image.png <b>Abhay, I need the image. PK: add the link, once it is in the resources folder</b></td>
 										</tr>
                                         <tr>
                                             <td scope="row">2</td>
                                             <td>Label/Text</td>
                                             <td><code>label_secure</code></td>
-											<td>*This is a secure channel*</td>
+											<td><b>Text</b>: <code>*This is a secure channel*</code></td>
 										</tr>
 										<tr>
                                             <td scope="row">3</td>
                                             <td>Label/Text</td>
                                             <td><code>label_cc</code></td>
-											<td>Please provide your credit card details for payment. Your card will be charged ${flowerCost} plus a delivery fee of ${deliveryCost}.</td>
+											<td><b>Text</b>: <code>Please provide your credit card details for payment. Your card will be charged ${flowerCost} plus a delivery fee of ${deliveryCost}.</code></td>
 										</tr>	
 										<tr>
                                             <td scope="row">4</td>
-                                            <td>Label/Text<br>(<i>Uncheck the </i><b>Initially Visible</b> <i>checkbox.</i>)</td>
+                                            <td>Label/Text<br></td>
                                             <td><code>messageKO</code></td>
-											<td>**Please, provide a valid credit card number**</td>
+											<td>
+											<b>Initially Visible</b>: <i>Uncheck</i><br><b>Text</b>: <code>**Please, provide a valid credit card number**</code></td>
 										</tr>
 										<tr>							
                                             <td scope="row">5</td>
                                             <td>Select Menu</td>
                                             <td><code>select_card_type</code></td>
-											<td>Values: AMEX, VISA, Master Card</td>
+											<td><b>Label</b>: <code>Type of Credit Card</code><br>
+											
+											<b>Label Inside Select Menu</b>: <code>Choose Card Type</code>
+											<br><b>(Option)</b> <b>Labels</b> and <b>Values</b>: <code>AMEX</code>, <code>VISA</code>, <code>Master Card</code></td>
 										</tr>
 										<tr>							
                                             <td scope="row">6</td>
                                             <td>Single-Line Input</td>
                                             <td><code>input_name</code></td>
-											<td>{customerName}</td>
+											<td><b>Label</b>: <code>Name as on card</code><br>
+											<b>Placeholder</b>: <code>{customerName}</code></td>
 										</tr>
 										<tr>							
                                             <td scope="row">7</td>
                                             <td>Single-Line Input</td>
                                             <td><code>input_card_number</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Credit Card Number*</code><br>
+											<b>Placeholder</b>: <code>Provide a valid credit card number</code></td>
 										</tr>
 										<tr>							
                                             <td scope="row">8</td>
                                             <td>Single-Line Input</td>
                                             <td><code>input_exp_date</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Expiration Date*</code><br>
+											<b>Placeholder</b>: <code>mm/yy</code></td>
 										</tr>										
 										<tr>							
                                             <td scope="row">9</td>
                                             <td>Single-Line Input</td>
                                             <td><code>input_verifi_code</code></td>
-											<td></td>
+											<td><b>Label</b>: <code>Verification Code*</code><br>
+											<b>Placeholder</b>: <code>123</code></td>
 										</tr>											<tr>							
                                             <td scope="row">10</td>
-                                            <td>Label/Text<br>(<i>Uncheck the </i><b>Initially Visible</b> <i>checkbox.</i>)</td>
+                                            <td>Label/Text</td>
                                             <td><code>messageOK</code></td>
-											<td>**Your credit card data is valid, please submit now...**</td>
+											<td><b>Initially Visible</b>: <i>Uncheck</i><br><b>Text</b>: <code>**Your credit card data is valid, please submit now...**</code></td>
 										</tr>											<tr>							
                                             <td scope="row">11</td>
                                             <td>Button</td>
                                             <td><code>reset</code></td>
-											<td>Reset</td>
+											<td><b>Button Text</b>: <code>Reset</td></code>
 										</tr>											<tr>							
                                             <td scope="row">12</td>
                                             <td>Button</td>
                                             <td><code>validate</code></td>
-											<td>Validate</td>
+											<td><b>Button Text</b>: <code>Validate</code></code></td>
 										</tr>
 <tr>							
                                             <td scope="row">13</td>
-                                            <td>Button<br>(<i>Uncheck the </i><b>Initially Visible</b> <i>checkbox.)</i></td>
+                                            <td>Button</td>
                                             <td><code>button_submit</code></td>
-											<td>Submit</td>
+											<td><b>Initially Visible</b>: <i>Uncheck</i><br>
+											<b>Button Text</b>: <code>Submit</code></td>
 										</tr>		
 										</table>
 										<p class="note">Here's what the designer should look like after you have added the 13 elements:</p>										<img src="img/instantapps-payment.png" alt="screenshot showing the instant app designer, which contains a palette of elements and the 13 elements from the table above added to the pane.">
@@ -438,16 +463,7 @@
 										<li>In the <b>Text</b> field, enter <code>Thank you. To continue, please close this window.</code></li>
 										</ol>
 										
-										<h3>Add Parameters</h3>
-								<ol>
-									<li>Click the <b>Parameters</b> tab.</li>
-									<li>Add the following parameters:
-									<ul>
-										<li><code>flowerCost</code></li>
-										<li><code>customerName</code></li>
-									</ul>
-									</li>
-								</ol>
+
 										<h3>Add Actions and Events</h3>
 										<p>Now we'll add a few events and actions.</p>
 										<p>Let's start with an event to populate the customer name. </p>
@@ -468,7 +484,7 @@
 										<li>Click <b>Add Action</b>.</li>
 										<li>Click the <b>Reset Elements</b> tile.</li>
 										<li>In the <b>Layout</b> part of the left navigation, drag the <code>validate</code> component to the <b>Drag and Drop an Element or Pane from the Layout</b> field in the tile for the action.</li>
-										<li>Repeat the above step for the following components:
+										<li>Repeat step 6 for the following components:
 										<ul>
 											<li><code>input_card_number</code></li>
 											<li><code>input_exp_date</code></li>
@@ -492,9 +508,10 @@
 										<li><b>Event Name:</b> <code>validateAPI</code></li>
 										<li><b>Test Response Status Code:</b> <code>200</code></li>
 										<li><b>Test Response:</b> <code>{"valid": true}</code></li>
-										</ul></li>
+										</ul>
+										<p class="note"><b>Important:</b> The REST service that is referenced within the <b>URL</b> field is <i>not</i> trusted by Oracle. So, when testing the bot, don't enter valid credit card information.</p></li>
 										</ol>
-										<p>Now we need to provide a JavaScript function for the validate API.</p>
+										<p>Now we'll define a JavaScript function to process the data returned from the API call and update the display in the instant app.</p>
 										
 										<ol>
 										<li>Click <b>Events and Actions</b>.</li>
@@ -503,7 +520,7 @@
 											<li>In the <b>Action</b> text area, paste the following function: 										
 										<pre>var result = JSON.parse(returnData);
 
-//Skip Validation
+//Skip Validation (for purposes of this training)
 var chkValid = result.valid;
 chkValid = true; // Currently hard coded to return “true” always.
 
@@ -517,9 +534,8 @@ if (chkValid)
 }else if (!chkValid){
    app.showElements("messageKO");
    app.showAlertDialog("Your credit card number is not valid. Please try again. For example use: 4444333322221111");
-   //app.showAlertDialog("tarjeta: "+app.elements.singleLineInput_1);    
-   //app.elements.singleLineInput_1.value=0;
 }</pre>
+											<p class="note"><b>Note:</b> For the purposes of this training, we don't want you to use real credit card numbers when testing the instant app. So, in this function, we set the <code>chkValid</code> variable to <code>true</code> to simulate successful validation of the credit card details.</p>
 											</li>
 											</ol>
 											
@@ -552,14 +568,44 @@ if (chkValid)
                                             <td>creditCardValidUntil</td>
                                             <td><code>{input_exp_date}</code></td>
                                         </tr>
-										</table></li>
+										</table>
+										<p class="note"><b>Note:</b> You may have noticed that we have't declared these parameters in the <b>Parameters</b> section. As output parameters, they don't need to be declared.</li>
 											
 										</ol>
                         </section>						
                         <hr>
-
                         <section>
-                            <h2 id="section_5" role="button" style="text-align: left;"><img src="./img/32_5.png" alt="section 5" height="32" width="32" class="num_circ">Test the Bot</h2>
+                            <h2 id="section_5" role="button" style="text-align: left;"><img src="./img/32_5.png" alt="section 56" height="32" width="32" class="num_circ">Integrate the 24hrsflowersPayment Instant App with the Bot</h2>
+							
+							<p>Now let's integrate this instant app with the bot.</p>
+					
+							<ol>
+						
+								<li>In the left navigation of your bot, click <img src="img/left_nav_dialog.png" alt="the Flows icon"> to open the dialog flow editor.</li>
+								<li>Replace the <code>makePayment</code> state with this code to call the instant app:
+								<pre>  makePayment:
+    component: "System.Interactive"
+    properties:
+      sourceVariableList: "flowerCost, deliveryCost, customerName"
+      variable: "payment" 
+      id: "XX_24hrsflowersPayment"
+      prompt: "To make a payment click the Make Payment link below"
+      linkLabel: "Make Payment"
+      cancelLabel: "Cancel"
+      translate: 
+    transitions:
+      next: "copyPaymentType"
+      actions:
+        cancel: "cancelOrder"
+        textReceived: "paymentOrCancel"</pre></li>
+		<li>Replace <code>XX_24hrsflowersPayment</code> with the name you gave your instant app (e.g. <code>AB_24hrsflowersPayment</code>).</li>
+		</ol>
+		
+
+							</section>
+							<hr>
+                        <section>
+                            <h2 id="section_6" role="button" style="text-align: left;"><img src="./img/32_6.png" alt="section 6" height="32" width="32" class="num_circ">Test the Bot</h2>
 							<ol>								
 								<li>Open the tester (<img src="img/test_button.png" alt="the Test icon">), type <code>Hi</code>, in the Message field, and click <b>Send</b>.</li>
 								<li>Go through the process of ordering some flowers up until you receive the message "How do you want to proceed?"</li>
@@ -574,9 +620,9 @@ if (chkValid)
 								<br>
 								<img src="img/instantapps-make-payment.png" alt="screenshot showing the tester with a Make Payment button.">								<p class="note">
 								</p>At this point the instant app should launch.</p></li>
-								<li>In the instant app, provide some mock details and click <b>Validate</b>.
+								<li>In the instant app, provide some mock details (<b><i>don't</i> use your real credit card information!</b>) and click <b>Validate</b>.
 								<br><img src="img/instantapps-validate.png" alt="screenshot showing the instant app page where you fill in payment information, like name and credit card number."></li>
-								<li>Once you have gotten confirmation on the validity of your credit card, click <b>Submit</b>.
+								<li>Once you have gotten confirmation on the validity of your credit card (remember, we earlier hard-coded this validity check to return <code>true</code> so that you don't have to enter valid credit card details), click <b>Submit</b>.
 								<br><img src="img/instantapps-submit-payment.png" alt="screenshot showing the instant app page with the validated payment details and a Submit button.">
 								<p class="note">After submitting the payment,you should see the following page:</p>
 								<img src="img/instantapps-endpage.png" alt="screenshot showing the instant app page with the validated payment details and a Submit button.">
@@ -593,7 +639,7 @@ if (chkValid)
                         <section>
                             <h2 id="next" role="button" style="text-align: left;"><img src="./img/32_next.png" alt="next step" height="32" width="32" class="num_circ">Next Lab</h2>
                             <ul>
-								<li><a href="bots-hol_ux-a.html">Lab 8: User Experience</li>
+								<li><a href="bots-hol_channels.html">Lab 10: Channels</li>
 							</ul>
                         </section>
                         <hr>
