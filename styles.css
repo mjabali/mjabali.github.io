@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    background-color: white;
+    font-family: Helvetica Neue, Helvetica;
+    color: black; 
+}
+    body a {
+        color: orange;
+        text-decoration: none; 
+    }
+    body a:hover {
+        color: orangered; 
+    }
+    body .content {
+        margin: 0 0 0 auto;
+        padding-left: 50px; 
+    }
+    body .content h2 {
+        font-weight: normal;
+        padding: 25px 0 0;
+        margin: 0px;
+        font-size: 60px; 
+        color: orange;
+    }
+    body .content p {
+        font-size: 17px;
+        margin: 10px 10px 5px 0px;
+        padding: 5px; 
+    }
+    body .content img {
+        width: 400px;
+        height: 400px;
+        float: right;
+        margin-right: 10px;
+    }
+    body .content hr{
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+    }
