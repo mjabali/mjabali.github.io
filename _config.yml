@@ -6,8 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  Your thoughts, feedback, and conversations are highly valued.
-  Thank you for visiting and joining me on this journey.
+  Based on a true story.
 
 # Build settings
 
@@ -32,7 +31,7 @@ minima:
      - { platform: github,         user_url: "https://github.com/mjabali" }
      - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jabali" }
      - { platform: twitter,        user_url: "https://twitter.com/mjabali" }
-     - { platform: microdotblog,   user_url: "https://marcelojabali.blogspot.com/" }
+     - { platform: stackoverflow,   user_url: "https://marcelojabali.blogspot.com/" }
 
 # If you want to link only specific pages in your header, uncomment this and add the path to the pages in
 # order as they should show up.
