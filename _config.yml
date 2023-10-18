@@ -1,0 +1,45 @@
+title: The Message
+author:
+  name: Marcelo Jabali
+  blog: https://twitter.com/mjabali
+
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  Your thoughts, feedback, and conversations are highly valued.
+  Thank you for visiting and joining me on this journey.
+
+# Build settings
+
+theme: minima
+
+#plugins:
+#  - jekyll-feed
+#  - jekyll-seo-tag
+
+# Theme-specific settings
+
+minima:
+  skin: dark
+  # Minima date format.
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
+  #
+  # date_format: "%b %-d, %Y"
+
+  # Generate social links in footer.
+  #
+  social_links:
+     - { platform: github,         user_url: "https://github.com/mjabali" }
+     - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jabali" }
+     - { platform: twitter,        user_url: "https://twitter.com/mjabali" }
+     - { platform: microdotblog,   user_url: "https://marcelojabali.blogspot.com/" }
+
+# If you want to link only specific pages in your header, uncomment this and add the path to the pages in
+# order as they should show up.
+#
+# header_pages:
+#   - about.md
+
+# Set to `true` to show excerpts on the homepage.
+#
+# show_excerpts: false
