@@ -4,7 +4,7 @@ title: "The Google Pixel 8 Pro: A Review of My Love-Hate Relationship Turned Lov
 categories: phones
 ---
 
-<img src="/assets/images/IMG_3682.png" width=300 align="center">
+<img src="/assets/images/IMG_3682.png" width=300>
 
 As a long-time user of Google Pixel devices, my journey with these smartphones has been nothing short of a rollercoaster ride. From the highs of an exceptional camera system to the lows of unpredictable performance, I've experienced it all. But when the opportunity to try the Google Pixel 8 Pro presented itself, I decided to give it one more chance before potentially giving up on the Pixel series. Fast forward to today, and I can confidently say that the Google Pixel 8 Pro has won me over. In this post, I'll share my thoughts on this device, highlighting its design, performance, battery life, camera system, and some impressive software features.
 
