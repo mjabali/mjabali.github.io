@@ -8,7 +8,7 @@
 layout: home
 ---
 
-<img src="img/beach_profile_circle.png" width=200>
+<img src="/assets/images/beach_profile_circle.png" width=200>
 
 Hello and welcome to my personal site!
 
@@ -32,3 +32,5 @@ I'm a <a href="http://www.diabetes.org/diabetes-basics/type-1/">Type 1 Diabetic<
 This website is my canvas, a space where I paint a picture of my life and passions. It's a platform where I can engage with you, share my knowledge and experiences, and hopefully, provide a source of inspiration and information.
 
 Reach out if you want to talk about tech, developer enablement, technical documentation, travel, food or sports.
+
+# Posts
