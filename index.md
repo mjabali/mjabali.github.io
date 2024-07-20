@@ -8,7 +8,7 @@
 layout: home
 ---
 
-<img src="/assets/images/beach_profile_circle.png" width=200>
+<img src="/assets/images/mountain_profile_circle.png" width=200>
 
 Hello and welcome to my personal site!
 
