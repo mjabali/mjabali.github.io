@@ -12,8 +12,7 @@ layout: home
 
 Hello and welcome to my personal site!
 
-My name is <a href="https://twitter.com/mjabali">Marcelo Jabali</a> and I'm a Senior Director of 
-Engineering @ <a href="https://www.expediagroup.com">Expedia Group</a> where I lead the Partner Success, Developer Enablement and Technical Operations teams for the Conversation Platform, Contact Center and Universal Messaging Platform services.
+My name is <a href="https://twitter.com/mjabali">Marcelo Jabali</a> and I'm a Principal Product Manager @ <a href="https://www.expediagroup.com">Expedia Group</a>. I lead Developer Experience initiatives across all components of the developer ecosystem, including environments, workflow automation, tools, and developer productivity. My focus is on enhancing developer satisfaction and operational impact.
 
 I live in <a href="https://en.wikipedia.org/wiki/San_Diego">San Diego, CA</a>.
 
