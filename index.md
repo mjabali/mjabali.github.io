@@ -26,7 +26,7 @@ I publish <a href="https://github.com/mjabali">code here</a> when I can.
 
 I love traveling, watching movies, beer, wine and trying out new types of food.
 
-I'm a <a href="http://www.diabetes.org/diabetes-basics/type-1/">Type 1 Diabetic</a>, adopted, tennis player, ran a few half marathons and I love sports cars.
+I'm a <a href="http://www.diabetes.org/diabetes-basics/type-1/">Type 1 Diabetic</a>, adopted, padel player, ran a few half marathons and I love sports cars.
 
 This website is my canvas, a space where I paint a picture of my life and passions. It's a platform where I can engage with you, share my knowledge and experiences, and hopefully, provide a source of inspiration and information.
 
