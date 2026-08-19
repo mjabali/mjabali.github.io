@@ -12,7 +12,9 @@ layout: home
 
 Hello and welcome to my personal site!
 
-My name is <a href="https://twitter.com/mjabali">Marcelo Jabali</a> and I'm a Principal Product Manager @ <a href="https://www.expediagroup.com">Expedia Group</a>. I lead Developer Experience initiatives across all components of the developer ecosystem, including environments, workflow automation, tools, and developer productivity. My focus is on enhancing developer satisfaction and operational impact.
+My name is <a href="https://twitter.com/mjabali">Marcelo Jabali</a> and I'm a Principal Product Manager @ <a href="https://www.expediagroup.com">Expedia Group</a>, focused on the Analytics Platform, AI & Data Products. I lead product strategy for an AI-enabled analytics interface and adjacent platform experiences — covering rollout, guardrails, and the standards needed for reliable, enterprise-scale AI-assisted analytics workflows.
+
+Previously, I led Developer Experience initiatives across the developer ecosystem, spanning development environments, workflow automation, tools, and productivity, while partnering cross-functionally to align developer needs with business goals and using feedback and impact measurement to continuously improve developer satisfaction and operational effectiveness.
 
 I live in <a href="https://en.wikipedia.org/wiki/San_Diego">San Diego, CA</a>.
 
@@ -20,7 +22,7 @@ I'm active on <a href="https://www.twitter.com/mjabali">Twitter</a> and <a href 
 
 Prior to Expedia Group, I used to work at <a href="https://www.oracle.com">Oracle</a>, <a href="https://www.twilio.com/authy">Twilio</a>, <a href="https://www.tibco.com">TIBCO</a> and <a href="https://www.progress.com">Progress</a>.
 
-You can find more detailed professional information on my <a href="https://www.linkedin.com/in/jabali/">LinkedIn</a> profile.
+You can find more detailed professional information on my <a href="https://www.linkedin.com/in/jabali/">LinkedIn</a> profile, or view my <a href="/resume/">resume</a>.
 
 I publish <a href="https://github.com/mjabali">code here</a> when I can.
 
