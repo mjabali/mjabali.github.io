@@ -4,7 +4,7 @@ title: "Two MCP Servers, Not One: Why We Split Data Access From Analytics Workfl
 categories: ai-analytics
 ---
 
-# The Query Is the Easy Part. Where It Lives Afterward Is the Hard Part.
+## The Query Is the Easy Part. Where It Lives Afterward Is the Hard Part.
 
 _A case for splitting "let an AI query your data" and "let an AI produce durable analytics work" into two separate tools, not one._
 
