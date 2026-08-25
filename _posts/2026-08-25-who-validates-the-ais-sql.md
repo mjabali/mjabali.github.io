@@ -4,7 +4,7 @@ title: "Who's Actually Validating the AI's SQL? A Governance Gap Nobody's Solved
 categories: ai-analytics
 ---
 
-# The Query Ran Successfully. That's Not the Same as Correct.
+## The Query Ran Successfully. That's Not the Same as Correct.
 
 _Every AI-assisted analytics platform ships with a line buried in the docs that says the user is responsible for validating the output. Almost nobody has built anything that makes that actually happen._
 
