@@ -4,7 +4,7 @@ title: "An Introduction to Trino"
 categories: sql-engines
 ---
 
-# Why Your Data Is Still Holding You Hostage, And How Trino Sets It Free
+## Why Your Data Is Still Holding You Hostage, And How Trino Sets It Free
 
 _A practical introduction to the distributed SQL engine quietly powering analytics at Netflix, Pinterest, LinkedIn, and beyond._
 
