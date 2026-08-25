@@ -4,7 +4,7 @@ title: "Giving Your SQL Engine to an LLM: What Breaks When AI Clients Query Trin
 categories: ai-analytics
 ---
 
-# Your Query Engine Was Built for Analysts. It Wasn't Built for Agents.
+## Your Query Engine Was Built for Analysts. It Wasn't Built for Agents.
 
 _A field guide to what actually happens when you connect an LLM to a distributed SQL engine like Trino, and the guardrails you need before you let it run._
 
